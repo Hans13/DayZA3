@@ -14,7 +14,7 @@ _isOK = false;
 _brokenPart = false;
 
 //
-_hasToolbox = 	"ItemToolbox" in items player;
+_hasToolbox = 	"ItemToolbox" in magazines player;
 
 // moving this here because we need to know which part needed if we don't have it
 _nameType = 		getText(configFile >> "cfgVehicles" >> _type >> "displayName");
@@ -104,7 +104,8 @@ if (_hasToolbox) then {
 	} else {
 		r_interrupt = false;
 		if (vehicle player == player) then {
-			[objNull, player, rSwitchMove,""] call RE;
+			dayzSwitchMove = [player,""];
+            publicVariable "dayzSwitchMove";
 			player playActionNow "stop";
 		};
 		cutText ["Canceled Salvage.", "PLAIN DOWN"];

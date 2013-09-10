@@ -143,7 +143,7 @@ if (!_canFill) then {
 		};
 	} forEach _objectsPond;
 };
-
+/*
 //Auto-refuel
 _refuelVehicle = objNull;
 _refuelDistance = 15;
@@ -154,7 +154,7 @@ _countFuel = _countFuel + (count ((position _currentVehicle) nearObjects ["Land_
 _countFuel = _countFuel + (count ((position _currentVehicle) nearObjects ["Land_fuel_tank_stairs", _refuelDistance]));
 _countFuel = _countFuel + (count ((position _currentVehicle) nearObjects ["Land_wagon_tanker", _refuelDistance]));
 _isNearFeed = _countFuel > 0;
-
+*/
 //Off topic functions
 /*
 	if (player == player) then {
@@ -978,7 +978,7 @@ if (!isNull _cursorTarget and (player distance _cursorTarget < 4) and !_inVehicl
     player removeAction s_player_getin3;
     s_player_getin3 = -1;
 };
-
+/*
 //Auto-refuel Script
 if (_refuelVehicle != _currentVehicle) then {
     if (!isNull _refuelVehicle) then {
@@ -995,3 +995,4 @@ if (!_isNearFeed) then {
     _refuelVehicle removeAction _vehicle_refuel_id;
     _refuelVehicle = objNull;
 };
+*/
