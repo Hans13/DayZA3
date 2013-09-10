@@ -473,6 +473,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 } else {
 	//Engineering
 	{dayz_myCursorTarget removeAction _x} forEach s_player_repairActions;s_player_repairActions = [];
+	s_player_repair_crtl = -1;
 	dayz_myCursorTarget = objNull;
 	//Others
 	player removeAction s_player_forceSave;
